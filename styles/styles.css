@@ -1,0 +1,215 @@
+/* Reseteo de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.arriba {
+    font-size: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    margin: 0 auto;
+    justify-content:center;
+}
+
+.subti {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    margin: 0 auto;
+    justify-content:center;
+}
+
+/* Estilo para el cuerpo del documento */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilo para el contenedor principal con márgenes */
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    margin: 7%;
+    max-width: 1200px;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #D8DFE8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la columna de entrada de texto */
+.entrada {
+    flex: 0 0 70%;
+    padding-right: 20px;
+    background-color: #D8DFE8;
+}
+
+/* Estilo para la columna de resultado de texto */
+.resultado {
+    flex: 0 0 30%;
+    background-color: #D8DFE8;
+}
+
+/* Estilo para los textos de ingreso y resultado */
+textarea {
+    width: 100%;
+    height: 500px;
+    padding: 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    resize: none;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    font-family: 'Inter', sans-serif;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), 
+                inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Estilo para el texto del placeholder */
+textarea::placeholder {
+    color: #0A3871;
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+}
+
+/* Estilo específico para el cuadro de resultado (solo lectura) */
+textarea[readonly] {
+    background-color: #ffffff;
+    color: #0A3871;
+    border: 3px solid #ccc;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), 
+                inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+}
+
+textarea:invalid {
+    border: 2px solid red;
+}
+
+/* Contenedor para alinear los botones horizontalmente */
+.botones {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 25px;
+    gap: 10px;
+}
+
+.Advertencia {
+    color: #141313;
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+    font-size: 15px;
+}
+
+/* Estilo para el botón de encriptar (azul) */
+#encriptar {
+    background-color: #0A3871;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#encriptar:hover {
+    background-color: #082a51;
+}
+
+/* Estilo para el botón de desencriptar (blanco) */
+#desencriptar {
+    background-color: white;
+    color: #0A3871;
+    padding: 10px 20px;
+    border: 2px solid #0A3871;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#desencriptar:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo para el botón de copiar texto */
+#copiarTexto {
+    background-color: #0A3871;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px; /* Espacio entre el cuadro de resultado y el botón */
+}
+
+#copiarTexto:hover {
+    background-color: #082a51;
+}
+
+/* Estilo para el botón de limpiar (gris) */
+#limpiar {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    color: #0A3871; /* Texto #0A3871 */
+    padding: 10px 20px;
+    border: 2px solid #0A3871; /* Borde #0A3871 */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px; /* Espacio entre el botón de limpiar y los otros botones */
+}
+
+#limpiar:hover {
+    background-color: #e0e0e0; /* Fondo gris más claro al pasar el ratón */
+}
+
+
+/* Estilo para el footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0A3871;
+    color: white;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        padding: 20px;
+        margin: 5%;
+    }
+
+    .entrada, .resultado {
+        flex: 1 1 100%; /* Hacer que ambos divs ocupen el 100% del ancho */
+        margin-bottom: 20px; /* Añadir margen debajo para separar los elementos */
+    }
+
+    textarea {
+        height: 300px; /* Reducir la altura de los cuadros de texto */
+    }
+
+    .botones {
+        justify-content: center; /* Centrar los botones en la pantalla */
+        flex-wrap: wrap; /* Permitir que los botones se envuelvan si es necesario */
+    }
+
+    #encriptar, #desencriptar, #limpiar, #copiarTexto {
+        width: 100%; /* Hacer que los botones ocupen el 100% del ancho */
+        margin-top: 10px; /* Añadir margen superior entre botones */
+    }
+}

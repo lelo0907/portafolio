@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Alura Latam</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Fuente Inter -->
+</head>
+<body>
+    <header>
+        <h1 class="arriba">Proyecto Alura de Encriptado</h1>
+        
+    </header>
+
+    <h2 class="subti">Cristian Leonardo Lozano Velasco</h2>
+
+    <main>
+        <div class="contenedor">
+            <!-- Columna de entrada de texto -->
+            <div class="entrada">
+                <p>Ingrese el texto que desea encriptar/desencriptar:</p>
+                <textarea id="textoUsuario" placeholder="Ingrese su texto aquí"></textarea>
+                <h3 class="Advertencia">Advertencia: Solo se aceptan letras en minuscula sin acentos</h2>
+                <div class="botones">
+                    <button id="encriptar">Encriptar</button>
+                    <button id="desencriptar">Desencriptar</button>
+                </div>
+            </div>
+
+            <!-- Columna de resultado de texto -->
+            <div class="resultado">
+                <p>Resultado:</p>
+                <textarea id="resultadoTexto" readonly placeholder="Aquí aparecerá el resultado"></textarea>
+                <!-- Botón para copiar el texto -->
+                <button id="copiarTexto">Copiar texto</button>
+                <button id="limpiar">Limpiar</button> <!-- Botón para limpiar -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Cristian Leonardo Lozano Velasco</p>
+        <p>lelo0907@gmail.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
